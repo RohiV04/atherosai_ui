@@ -1,0 +1,147 @@
+
+
+
+
+:root {
+    --background: #D8E3FA;
+    --gray: #EAEAEC;
+    --primary: #29283F;
+    --primary-violet: #7370F4;
+}
+
+body {
+    background-color: var(--background);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    font-size: 16px;
+    padding: 1.5rem;
+    font-family: Poppins, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 1.5rem;
+    background-color: white;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s;
+    max-width: clamp(20rem, 70vw, 46.25rem);
+    min-width: 20rem;
+    min-height: 17.5rem;
+}
+
+.card:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 
+        0px 5px 15px;
+}
+
+.background {
+    flex: 1 1 15rem;
+}
+
+.background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    flex: 3 1 22rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 1rem;
+}
+
+.content > h2 {
+    font-size: clamp(
+        1.3rem, 2.5vw, 
+        1.8rem);
+    font-weight: 700;
+    margin-bottom: clamp(
+        0.35rem, 2vw, 
+        0.55rem
+    );
+}
+
+.content > p {
+    font-size: clamp(1rem, 
+        1.75vw, 1.1rem);
+    font-weight: 400;
+    margin: 0.4rem 0;
+}
+
+.content a {
+    color: var(--primary-violet);
+}
+
+.chips {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0.75rem 0px 1rem 0px;
+}
+
+.chip {
+    border-radius: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.9375rem;
+    background-color: var(--gray);
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.chip:hover {
+    background-color: var(
+        --primary-violet);
+    color: var(--gray)
+}
+
+.action-buttons {
+    border-top: 1px solid var(
+        --gray);
+    padding-top: 1rem;
+    gap: 0.75rem;
+    display: flex;
+    margin-top: auto;
+    flex-wrap: wrap;
+}
+
+.action-buttons a {
+    background-color: var(
+        --primary);
+    color: white;
+    padding: 0.75rem;
+    text-decoration: none;
+    border-radius: 0.75rem;
+    outline: none;
+    border: none;
+    font-size: 1.125rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    flex: 1 0 15rem;
+    max-width: 100%;
+}
+
+.action-buttons a:hover {
+    text-decoration: underline;
+}
+
+.action-buttons a.secondary {
+    background-color: inherit;
+    color: var(--primary);
+    border: 1px solid var(
+        --primary);
+    flex: 1 0 5rem;
+}
+

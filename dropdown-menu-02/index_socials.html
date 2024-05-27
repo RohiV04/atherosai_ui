@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Dropdown Menu 02</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap"
+            rel="stylesheet"
+        >
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class="navigation__group">
+                <button class="icon-wrapper">
+                    <img class="icon" src="assets/message.svg" alt="Message">
+                </button>
+                <div class="icon-wrapper notifications">
+                    <button type="button">
+                        <img class="icon" src="assets/notification.svg" alt="Notification">
+                    </button>
+                    <div class="notification-mark notification-mark--pulsing"></div>
+                </div>
+                <button type="button" class="profile">
+                    <img src="assets/profile.png" alt="Profile Picture">
+                </button>
+            </div>
+            <div class="dropdown__wrapper hide dropdown__wrapper--fade-in none">
+                <div class="notifications-top">
+                    <h2>Notifications</h2>
+                </div>
+                <div class="notification-items">
+                    <div class="notification-item notification-item--recent">
+                        <div class="avatar-wrapper">
+                            <img class="avatar" src="assets/jason.jpg" alt="Jason Alexander">
+                        </div>
+                        <div class="notification-item__body">
+                            <div>
+                                <strong>Jason Alexander</strong> completed <strong>Issue 131</strong>
+                            </div>
+                            <span class="time">
+                                6 min ago
+                            </span>
+                        </div>
+                        <div class="border"></div>
+                    </div>
+                </div>
+            </div>      
+        </header>
+        <script src="script.js"></script>
+    </body>
+</html>
+
+
+
+

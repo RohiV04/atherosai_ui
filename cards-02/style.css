@@ -1,0 +1,136 @@
+
+
+:root {
+    --primary-color: #635bff;
+    --secondary: #0a2540;
+}
+
+body {
+    display: flex;
+    width: 100%;
+    font-family: "Helvetica Neue","Arial",
+    sans-serif;
+    padding: 3rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 90%;
+    gap: 1rem;
+}
+
+.content {
+    height: 16rem;
+    padding: 1.5rem;
+    flex-grow: 1;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border-bottom-left-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+    box-shadow: 0px 18px 36px -18px 
+    rgba(0,0,0,0.1),
+    0px 30px 45px -30px rgba(50,50,93,0.25);
+    background-color: white;
+    cursor: pointer;
+    width: 100%;
+    flex-basis: 20rem;
+    padding: 0.25rem;
+    min-height: 30rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.content > h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.content > p {
+    font-size: 1.125rem;
+    line-height: 1.55;
+    font-weight: 500;
+}
+
+.content a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.content a:hover {
+    color: #0a2540;
+}
+
+.card-background {
+    height: 13rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.card:hover .card-background {
+    height: 10rem;
+}
+
+.card-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card:hover .action-bottom-bar a {
+    opacity: 1;
+}
+
+.action-bottom-bar {
+    display: flex;
+    font-size: 1.125rem;
+    height: 2.5rem;
+    width: 100%;
+}
+
+.action-bottom-bar a {
+    display: flex;
+    gap: 0.4rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 800;
+    opacity: 0;
+    padding: 0 1.5rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.action-bottom-bar a:hover {
+    color: var(--secondary);
+}
+
+.action-bottom-bar a:hover svg {
+    color: var(--secondary);
+}
+
+.action-bottom-bar a svg {
+    transition: all 0.2s ease-in-out;
+}
+
+.arrow {
+    display: none;
+}
+
+.action-bottom-bar a:hover .arrow {
+    display: block;
+}
+
+.action-bottom-bar a:hover .chevron {
+    display: none;
+}

@@ -1,0 +1,67 @@
+:root {
+    --background: #2C2C2C;
+    --primary-color: white;
+    --secondary-color: #2C2C2C;
+}
+
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+
+.background {
+    background-color: var(--background);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.social-media-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+}
+
+.social-media-buttons li {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    display: grid;
+    background-color: var(--primary-color);
+    place-items: center;
+    transition: all 0.3s;
+    border: 1px solid var(--primary-color);
+}
+
+.social-media-buttons li a {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    color: var(--secondary-color);
+}
+
+.social-media-buttons li:hover {
+    background-color: var(--secondary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+}
+
+.social-media-buttons li a svg {
+    height: 1.5rem;
+    width: 1.5rem;
+    stroke: var(--secondary-color);
+    stroke-width: 1.75;
+    transition: 0.8s;
+}
+
+.social-media-buttons li:hover svg {
+    stroke: var(--primary-color);
+    transform: rotateY(360deg);
+    stroke-width: 1.75;
+}

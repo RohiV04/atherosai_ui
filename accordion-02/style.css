@@ -1,0 +1,122 @@
+
+:root {
+  --primary-violet: #6238E2;
+  --background-violet-light: #EEEBFD;
+  --gray: #D5D4D5;
+  --background: #2C2C2C;
+}
+
+html {
+	font-size: 16px;
+	font-family: "Poppins";
+}
+
+body {
+	background: var(--background);
+	height: 100vh;
+  display: flex;
+  padding-top: 260px;
+  justify-content: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.accordion-container {
+  margin: 0 auto;
+  min-width: 330px;
+  overflow: hidden;
+
+}
+
+.main-item {
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  cursor: pointer;
+  background: white;
+  align-items: center;
+  justify-content: start;
+  gap: 8px;
+  transition: all ease-in-out 0.25s;
+}
+
+.main-item:hover {
+  background-color: var(--background-violet-light);
+  color: var(--primary-violet);
+}
+
+.main-item svg {
+  color: var(--background);
+  transition: all ease-in-out 0.25s;
+}
+
+.main-item:hover svg {
+  color: var(--primary-violet);
+}
+
+.main-item--open {
+  border-radius: 8px 8px 0px 0px;
+  background-color: var(--primary-violet);
+  transition: all 200ms;
+  color: white;
+}
+
+.main-item--open:hover {
+  color: white;
+  border-radius: 8px 8px 0px 0px;
+  background-color: var(--primary-violet);
+}
+
+.main-item--open svg {
+  color: white;
+}
+
+.main-item--open:hover svg {
+  color: white;
+}
+
+.accordion-container > ul {
+  max-height: 0;
+  background-color: var(--background);
+  list-style-type: none;
+  margin: 0;
+  padding-left: 14px;
+  opacity: 0;
+  background-color: var(--background-violet-light);
+  visibility: hidden;
+  transition: all ease-in-out 0.2s;
+}
+
+.main-item--open + ul {
+  visibility: visible;
+  max-height: 400px;
+  opacity: 1;
+  border-radius: 0px 0px 8px 8px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.accordion-container > ul > li {
+  height: 48px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.accordion-container > ul > li:hover {
+  color: var(--primary-violet);
+  cursor: pointer;
+}
+
+.expand-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: auto;
+}
+
+.main-item--open > .expand-icon {
+  transform: rotate(90deg);
+}

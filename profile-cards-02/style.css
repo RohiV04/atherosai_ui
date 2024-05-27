@@ -1,0 +1,101 @@
+
+
+
+:root {
+    --background: #2C2C2C;
+}
+
+body {
+    background-color: var(--background);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    padding: 1.5rem;
+    font-family: Poppins, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 1.25rem 1.25rem 1rem 1rem;
+    background-color: white;
+    cursor: pointer;
+    overflow: hidden;
+    max-width: clamp(38.75rem, 70vw, 51.25rem);
+    min-width: 15rem;
+    min-height: 16.5rem;
+}
+
+.card:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.background {
+    flex: 1 1 15rem;
+}
+
+.background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    flex: 3 1 22rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 1rem;
+}
+
+.content > h2 {
+    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+    font-weight: 700;
+    margin-bottom: clamp(0.35rem, 2vw, 0.55rem);
+}
+
+.content > p {
+    font-size: clamp(1.1rem, 1.75vw, 1.35rem);
+    font-weight: 400;
+    margin-bottom: 1rem;
+    line-height: 1.4rem;
+}
+
+.social-icons {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    margin-top: auto;
+    gap: clamp(0.4rem, 2vw, 0.8rem);
+}
+  
+.social-icons li {
+    list-style: none;
+}
+
+.social-icons li a {
+    position: relative;
+    display: block;
+    display: grid;
+    place-items: center;
+    font-weight: bold;
+    transition: .2s;
+}
+
+.social-icons li a svg {
+    stroke: var(--background);
+    width: clamp(1.6rem, 2.3vw, 2rem);
+    height: clamp(1.6rem, 2.3vw, 2rem);
+    stroke-width: 2px;
+}
+
+.social-icons li a:hover svg {
+    transition: 1.2s;
+    transform: rotateY(360deg);
+}

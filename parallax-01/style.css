@@ -1,0 +1,49 @@
+
+:root {
+    --background: #3C343D;
+    --background-border: #6B626C;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+
+body {
+    font-family: Poppins;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.parallax-image {
+    display: block;
+    height: 58.75rem;
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.parallax-image-01 {
+    background-image: url("assets/autumn_forest.jpg");
+}
+
+.parallax-image-02 {
+    background-image: url("assets/forest_pathway.jpg");
+
+}
+
+.parallax-image-03 {
+    background-image: url("assets/winter_forest.jpg");
+}
+section {
+    padding: 4rem;
+}
+
+section > h2 {
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+  

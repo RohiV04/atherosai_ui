@@ -1,0 +1,117 @@
+
+
+:root {
+    --white: #FFF;
+    --primary: #645DFF;
+    --secondary: #2A2649;
+    --secondary-light: #777777;
+    --body-background: #efeefa;
+    --border: #E6E8F0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 1rem;
+    background-color: var(--body-background);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.tabs-container {
+    width: 100%;
+    max-width: 50rem;
+    display: flex;
+	margin: 0.625rem;
+    overflow: hidden;
+	border-radius: 1rem;
+    background-color: var(--white);
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;	
+}
+
+.tab-content-wrapper {
+    overflow-y: hidden;
+    overflow-x: auto;
+    height: 33.75rem;
+    min-width: 18rem;
+    color: var(--secondary);
+    transition: all 0.45s ease-in-out;
+    padding: 0.75rem 1.5rem;
+}
+
+.tab-content h2 {
+    color: var(--secondary);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.tab-content {
+    display: block;
+    font-size: 1rem;
+    padding: 1.5rem 0.5rem;
+    width: 24rem;
+    height: 33.75rem;
+    transition: all 0.45s ease-in-out;
+}
+
+.tab-content img {
+    max-width: 18rem;
+    width: 80%;
+    flex-grow: 1;
+}
+
+.tabs {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+.tabs a {
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    text-decoration: none;
+    width: 100%;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--secondary-light);
+    overflow: hidden;
+    text-align: left;
+    height: 5.5rem;
+    padding: 0px 1.5rem;
+    width: 22rem;
+    gap: 1rem;
+}
+
+.tabs a img {
+    height: 1.25rem;
+    width: 1.25rem;
+}
+
+.tabs .active, .tabs a:hover {
+    font-weight: 700;
+    outline: none;
+    color: var(--primary);
+    border-right: 3px solid var(--primary);
+}
+
+.tabs a svg {
+    width: 2.25rem;
+    height: 2.25rem;
+    stroke: var(--secondary-light);
+}
+
+.tabs .active svg, .tabs a:hover svg {
+    stroke: var(--primary);
+}

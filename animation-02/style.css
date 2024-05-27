@@ -1,0 +1,58 @@
+:root {
+    --bg: #171717;
+    --text-color: #fff;
+    --accent: cyan;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Mulish', sans-serif;
+    background: var(--bg);
+    display: flex;
+    height: 100vh;
+    align-items: center;
+
+}
+
+.button {
+    display: inline-block;
+    max-width: 20rem;
+    margin: 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+}
+
+.shape {
+    fill: transparent;
+    stroke: var(--accent);
+    stroke-dasharray: 120 500;
+    stroke-dashoffset: -454;
+    stroke-width: 8px;
+    transition:
+        stroke-width 0.9s,
+        stroke-dashoffset 0.9s,
+        stroke-dasharray 0.9s;
+}
+
+.text {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    letter-spacing: 0.3rem;
+    color: var(--text-color);
+    top: -3rem;
+    position: relative;
+    pointer-events: none;
+}
+
+.shape:hover {
+    stroke-width: 3px;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 760;
+}

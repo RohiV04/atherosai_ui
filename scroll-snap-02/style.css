@@ -1,0 +1,80 @@
+:root {
+    --background: #1F2336;
+    --scrollbar-background: #313852;
+    --text: #F1F1F1;
+    --text-active: #F1F1F180;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    height: 100vh;
+    display: flex;
+    background-color: var(--background);
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    padding: 1rem;
+    max-width: 200px;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.card {
+    min-width: 12.5rem;
+    min-height: 12.5rem;
+    color: var(--text);
+    display: flex;
+    font-weight: 600;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    transition: all 0.2s;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    scroll-snap-align: start;
+}
+
+.card:nth-child(1) {
+    background-image: linear-gradient(to bottom, #9377F2, #6250D7);
+}
+
+.card:nth-child(2) {
+    background-image: linear-gradient(to bottom, #E5866C, #DF795D);
+}
+
+.card:nth-child(3) {
+    background-image: linear-gradient(to bottom, #5866E4, #4D5AD9);
+}
+
+.card:nth-child(4) {
+    background-image: linear-gradient(to bottom, #97BF42, #75AA29);
+}
+
+.container::-webkit-scrollbar {
+    height: 0.65rem;
+}
+
+.container::-webkit-scrollbar-track {
+    background: var(--scrollbar-background);
+    border-radius: 50rem;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background: var(--text);
+    border-radius: 50rem;
+}

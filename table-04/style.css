@@ -1,0 +1,174 @@
+:root {
+    --background: #29263D;
+    --table-background: #29263D;
+    --primary: #ffd45e;
+    --text-color: #FFFFFF;
+    --gray: #A0A7B1;
+    --th-background: #2E2B43;
+}
+
+body {
+    font-family: Poppins, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: var(--background);
+}
+
+.table-widget {
+    border-radius: 1rem;
+    background: var(--table-background);
+    padding: 1.5rem;
+    text-align: left;
+    overflow-x: auto;
+    user-select: none;
+    color: var(--text-color);
+}
+
+.table-widget table {
+    max-width: fit-content;
+    border-collapse: collapse;
+}
+
+
+.table-widget thead tr {
+    background: var(--th-background);
+}
+
+.table-widget .caption {
+    display: flex;
+    justify-content: space-between;
+}
+
+.table-widget .export-btn {
+    background: none;
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.table-widget .export-btn:hover {
+    color: var(--primary);
+}
+
+.table-widget .export-btn svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+.table-widget th {
+    padding: 1.25rem 1rem;
+    font-size: 1.05rem;
+    font-weight: 800;
+    vertical-align: middle;
+}
+
+.table-widget td {
+    padding: 1rem;
+    background: transparent;
+    color: white;
+    vertical-align: middle;
+}
+
+.table-widget tbody tr {
+    transition: all 0.2s;
+}
+
+.table-widget tbody tr:hover {
+    cursor: pointer;
+    background: var(--th-background);
+}
+
+.team-member-profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.team-member-profile img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.profile-info__name {
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+
+.status {
+    display: flex;
+    font-weight: 700;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.status__circle {
+    display: inline-block;
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 50%
+}
+
+.status--active {
+    background: #2ECC71;
+}
+
+.status--inactive {
+    background: #ffd071;
+}
+
+.status--offline {
+    background-color: var(--gray);
+}
+
+.tags {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.tag {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    color: var(--background);
+}
+
+.tag::first-letter {
+    text-transform: uppercase;
+}
+
+.tag--design {
+    background: #bd8eff;
+}
+
+.tag--QA {
+    background: #ff8585;
+}
+
+.tag--dev {
+    background: #89b6ff;
+}
+
+.tag--marketing {
+    background: #ffd45e;
+}
+
+.table-widget {
+    min-height: 5rem;
+}

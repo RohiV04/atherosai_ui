@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Drag & drop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section class='stock-watchlist-container'>
+        <h2><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-graph" width="24" height="24"
+                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M4 18v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+                <path d="M7 14l3 -3l2 2l3 -3l2 2" />
+            </svg>My Watchlist</h2>
+        <div id="stocks">
+            <article class="stock-row">
+                <img class="stock-avatar" src="assets/tesla.png" alt="Tesla">
+                <div class="stock-name">
+                    <h3>TSLA</h3>
+                    <p>Tesla, Inc.</p>
+                </div>
+                <div class="stock-info">
+                    <p class="price">256.61</p>
+                    <p class="change">+4.07</p>
+                </div>
+            </article>
+            <article class="stock-row">
+                <img class="stock-avatar" src="assets/nvidia.png" alt="Microsoft">
+                <div class="stock-name">
+                    <h3>NVDA</h3>
+                    <p>Nvidia</p>
+                </div>
+                <div class="stock-info">
+                    <p class="price">496.5</p>
+                    <p class="change">+1.17</p>
+                </div>
+            </article>
+            <article class="stock-row">
+                <img class="stock-avatar" src="assets/apple.png" alt="Apple">
+                <div class="stock-name">
+                    <h3>APPL</h3>
+                    <p>Apple Inc.</p>
+                </div>
+                <div class="stock-info">
+                    <p class="price">197.6</p>
+                    <p class="change">+0.52</p>
+                </div>
+            </article>
+            <article class="stock-row">
+                <img class="stock-avatar" src="assets/shell.png" alt="Shell">
+                <div class="stock-name">
+                    <h3>SHELL</h3>
+                    <p>Shell plc</p>
+                </div>
+                <div class="stock-info">
+                    <p class="price price--negative">64.61</p>
+                    <p class="change change--negative">-1.07</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- JS scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

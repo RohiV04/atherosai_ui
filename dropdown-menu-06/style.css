@@ -1,0 +1,158 @@
+
+
+:root {
+  --background: #121826;
+  --primary-item: #FEFEFE;
+  --background-item: #121826;
+  --background-item-hover: #292F3B;
+  --item-non-hover: #FEFEFE;
+  --text-link: #C9CDD2;
+  --text-link-accent: #DADBDE;
+  --line-color: #222836;
+}
+
+html {
+	font-size: 16px;
+	font-family: "Poppins", sans-serif;
+}
+
+body {
+	background: var(--background);
+	height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.dropdown {
+  min-width: 10rem;
+  width: 100%;
+  max-width: 16rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: var(
+    --background-item
+  );
+}
+
+.main-item {
+  padding: 0.5rem;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: start;
+  border-radius: 0.5rem;
+  user-select: none;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  gap: 1rem;
+  border: none;
+  width: 100%;
+  background: var(--background-item);
+  transition: all ease-in-out 0.25s;
+  color: var(--item-non-hover);
+}
+
+.main-item:hover {
+  background-color: var(
+    --background-item-hover
+  );
+  color: var(--item-non-hover);
+}
+
+.main-item svg {
+  stroke: var(--item-non-hover);
+  transition: all ease-in-out 0.25s;
+}
+
+.main-item:hover svg {
+  stroke: var(--primary-item);
+}
+
+.main-item--open {
+  border-radius: 8px;
+  transition: all 200ms;
+  color: var(--primary-item);
+}
+
+.main-item--open:hover {
+  color: var(--primary-item);
+  border-radius: 8px;
+  background-color: var(
+    --background-item-hover);
+}
+
+.main-item--open svg {
+  stroke: var(--primary-item);
+}
+
+.dropdown > ul {
+  max-height: 0;
+  list-style-type: none;
+  margin: 0;
+  padding-left: 14px;
+  opacity: 0;
+  font-size: smaller;
+  visibility: hidden;
+  transition: all ease-in-out 0.2s;
+}
+
+.main-item--open + ul {
+  visibility: visible;
+  max-height: 400px;
+  padding-left: 22px;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.dropdown > ul > li {
+  height: 48px;
+  display: flex;
+  width: 100%;
+  font-size: 0.9rem;
+  align-items: center;
+  border-left: 2px solid var(--line-color);
+}
+
+.dropdown > ul > li > a {
+  color: var(--item-non-hover);
+  padding: 1rem 0.75rem;
+  height: 2.4rem;
+  line-height: 2.4rem;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  margin-left: 1rem;
+  width: 100%;
+}
+
+.dropdown > ul > li:hover {
+  color: var(--primary-item);
+  cursor: pointer;
+}
+
+.dropdown > ul > li:hover > a {
+  color: var(--primary-item);
+  background: var(--background-item-hover);
+  width: 100%;
+}
+
+.expand-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: auto;
+  transform: rotate(90deg);
+}
+
+.main-item--open > .expand-icon {
+  transform: rotate(-90deg);
+}
+

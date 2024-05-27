@@ -1,0 +1,91 @@
+:root {
+    --border-radius: 2rem;
+    --bg: #060D23;
+    --btn-bg: #3F396F;
+    --glow-size: 0.5rem;
+}
+
+body {
+    background-color: var(--bg);
+    font-family: 'Manrope',
+        sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.button-glow {
+    min-width: 10rem;
+    min-height: 3rem;
+    text-decoration: none;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: relative;
+    z-index: 0;
+    border-radius: var(--border-radius);
+    transition: all 0.5s;
+    gap: 0.5rem;
+}
+
+.button-glow:before {
+    content: '';
+    background: linear-gradient(to right, #B881FF, #A963F7,
+            #8bff5d, #ffc300, #B881FF, #A963F7,
+            #8bff5d, #ffc300, #B881FF);
+    position: absolute;
+    background-size: 300%;
+    z-index: -1;
+    filter: blur(var(--glow-size));
+    width: calc(100% + var(--glow-size));
+    height: calc(100% + var(--glow-size));
+    opacity: 0;
+    border-radius: var(--border-radius);
+    animation: glow 25s alternate infinite;
+    transition: opacity .5s linear;
+}
+
+.button-glow:active {
+    background: var(--btn-bg);
+}
+
+.button-glow:hover:before {
+    opacity: 1;
+}
+
+.button-glow:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--btn-bg);
+    left: 0;
+    top: 0;
+    border-radius: var(--border-radius);
+}
+
+@keyframes glow {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 300% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}

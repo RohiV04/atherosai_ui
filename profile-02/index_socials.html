@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="profile">
+        <header class="profile__header">
+            <div class="profile__highlight__wrapper">
+                <div class="profile__highlight"><!-- icon --> 1760</div>Students
+            </div>
+            <div class="profile__avatar">
+                <img src="assets/profile.jpg" loading="lazy" alt="Mentor profile">
+            </div>
+            <!-- another highlight -->
+        </header>
+        <div class="profile__name">
+            <h2>Melissa Taylor<img src="assets/verified.svg" alt="Verified Ticker"></h2>
+            <p>Frontend/Fullstack Developer </p>
+        </div>
+        <ul class="social-links">
+            <li><a href="#"><!-- svg --></a></li>
+            <!-- more list items -->
+        </ul>
+        <main>
+            <div class="tabs-wrapper">
+                <ul class="tabs">
+                    <li class="active">
+                        <a id="tab1" href="#about">About me</a>
+                    </li>
+                    <!-- more tabs -->
+                    <li id="active-bg"></li>
+                </ul>
+            </div>
+            <div id="tab1-content" class="tab-content tab-content--active">
+                <!-- tab content here -->
+            </div>
+            <!-- more tab content -->
+        </main>
+        <a href="#" class="btn btn--primary">Book Mentoring</a>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

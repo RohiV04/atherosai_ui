@@ -1,0 +1,41 @@
+:root {
+    --green: #2ECC71;
+    --orange: #ffd500;
+    --white: #F8F8FF;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+    font-family: 'Inter', sans-serif;
+    height: 100vh;
+}
+
+.avatars {
+    display: flex;
+    transition: all 0.2s ease-in-out;
+}
+
+.avatars img {
+    width: 8rem;
+    height: 8rem;
+    object-fit: cover;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    border: 8px solid var(--green);
+    outline: 8px solid var(--white);
+    transition: all 0.2s ease-in-out;
+}
+
+.avatars img:not(:first-child) {
+    margin-left: -2rem;
+}
+
+.avatars img:hover {
+    border: 8px solid var(--orange);
+    transform: scale(1.1);
+}
+

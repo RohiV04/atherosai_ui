@@ -1,0 +1,51 @@
+
+
+:root {
+    --background: #1F2336;
+    --accent: #F4BD50;
+}
+
+body {
+    font-family: 'Mulish', sans-serif;
+    font-size: 16px;
+    background-color: var(--background);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.cta-button {
+    box-shadow: 0 0 0 0 var(--accent);
+    outline: 2px solid;
+    color: white;
+    outline-color: white;
+    outline-offset: 0;
+    text-shadow: none;
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 2.5rem;
+    max-width: 160px;
+    width: 100%;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    transition: all 550ms cubic-bezier(
+        .36, .63, .5, .73
+    );
+}
+
+.cta-button:hover {
+    box-shadow: 0 0 0 2px var(
+        --accent
+    );
+    outline-color: rgba(
+        255, 255, 255, 0
+    );
+    outline-offset: 15px;
+    color: var(--accent);
+}
+

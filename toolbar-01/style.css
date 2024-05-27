@@ -1,0 +1,179 @@
+
+:root {
+    --white: #FFF;
+    --gray: #F3F3F3;
+    --gray-mid: #d6d6d6;
+    --gray-dark: #3e3e3e;
+    --button-hover: #ECE8F9;
+    --body-background: #f3f1f9;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    padding: 1rem;
+    background-color: var(
+        --body-background
+    );
+}
+
+* {
+    box-sizing: border-box;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button:focus { outline: revert } 
+
+header {
+    height: 5rem;
+    padding: 0 1rem;
+    border-radius: 0.5rem;
+    margin: auto;
+    background-color: var(--white);
+    width: 100%;
+    min-width: 17.5rem;
+    max-width: 30rem;
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(100, 100, 111, 0.2)
+        0px 7px 29px 0px;
+}
+
+.navigation__group {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    width: 100%;
+}
+
+.navigation__group .icon {
+    width: 3rem;
+    height: 3rem;
+    padding: 0.4rem;
+    transition: all 0.2s ease-in-out;
+    border-radius: 50%;
+}
+
+.apps__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation__group > button:nth-child(1) {
+    margin-right: auto;
+}
+
+.navigation__group button:hover, 
+.navigation__group button:focus {
+    background-color: var(--button-hover);
+    border-radius: 50%;
+}
+
+.profile {
+    display: block;
+    width: 2.75rem;
+    height: 2.75rem;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.dropdown__wrapper {
+    min-width: 12.875rem;
+    padding: 0.75rem;
+    top: 5rem;
+    right: -0.9375rem;
+    position: absolute;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    gap: 0.25rem;
+    animation: fadeOutAnimation ease-in-out 
+        0.2s forwards;
+    box-shadow: rgba(100, 100, 111, 0.2)
+        0px 7px 29px 0px;
+}
+
+.dropdown__wrapper h3 {
+    margin: 0;
+    margin-bottom: 0.25rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-align: left;
+    color: var(--gray-dark);
+}
+
+.dropdown__wrapper svg {
+    stroke: var(--gray-dark);
+}
+
+.apps__button--wrapper {
+    position: relative;
+}
+
+.apps-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    max-height: 10rem;
+}
+
+.dropdown__wrapper--fade-in {
+    animation: fadeInAnimation ease-in-out
+        0.2s forwards;
+}
+
+.none {
+    display: none;
+}
+
+.hide {
+    opacity: 0;
+    visibility: hidden;
+    animation: fadeOutAnimation ease-in-out
+        0.2s forwards;
+}
+
+.app svg {
+    padding: 0.375rem;
+    width: 3rem;
+    height: 3rem;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        height: 7.5rem;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        height: 12.5rem;
+    }
+}
+
+@keyframes fadeOutAnimation {
+    0% {
+        opacity: 1;
+        height: 12.5rem;
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        height: 7.5rem;
+        visibility: hidden;
+    }
+}

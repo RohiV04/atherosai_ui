@@ -1,0 +1,85 @@
+
+:root {
+    --background: #3C343D;
+    --background-border: #6B626C;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+
+body {
+    font-family: Poppins;
+    height: 100vh;
+    padding: 2rem;
+    display: grid;
+    place-items: center;
+    background-color: var(--background);
+}
+
+.gallery {
+    display: flex;
+    background-color: var(--background);
+    gap: 1rem;
+}
+
+.card {
+    position: relative;
+    left: 0;
+    width: 9rem;
+    height: 10rem;
+    background-color: var(--background);
+    border-radius: 0.5rem;
+    transition: 1000ms all;
+    transform-origin: center left;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.5);
+    outline: 1px solid var(--background);
+    overflow: hidden;
+}
+
+.card img {
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 0.25rem;
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: scale(1.15);
+}
+
+@keyframes cardFade {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+.card:hover figcaption {
+    animation: cardFade 0.3s ease-in-out;
+    font-size: 0.6rem;
+    position: absolute;
+    height: 5rem;
+    width: 10rem;
+    display: flex;
+    align-items: end;
+    background: linear-gradient(
+        to top, 
+        rgba(0, 0, 0, 0.9) 0%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    color: white;
+    left: 0;
+    bottom: 0;
+    padding-left: 0.75rem;
+    padding-bottom: 0.65rem;
+}
+
+.card:hover ~ .card {
+    font-weight: bold;
+    cursor: pointer;
+    transform: translateX(1.3rem);
+}

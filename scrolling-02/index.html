@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Finance Bank Accounts</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">    
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="action-buttons">
+                <a href="#" class="action-button action-button--primary">
+                    <svg width="16" height="16" fill="currentColor" focusable="false" viewBox="0 0 24 24"><path d="M21.343 10.543 12.77 1.972a.829.829 0 0 0-1.2 0L3 10.543l1.2 1.2 7.114-7.114v17.657h1.715V4.63l7.114 7.114 1.2-1.2Z"></path></svg>
+                    Send
+                </a>
+                <a aria-expanded="false" href="#" class="action-button">
+                    <svg width="16" height="16" fill="currentColor" focusable="false" viewBox="0 0 24 24"><path d="M22.286 11.143h-9.429V1.715h-1.714v9.428H1.714v1.715h9.429v9.428h1.714v-9.428h9.429v-1.715Z"></path></svg>
+                    Add Money
+                </a>
+                <a aria-expanded="false" href="#" class="action-button">
+                    <svg width="16" height="16" fill="currentColor" focusable="false" viewBox="0 0 24 24"><path d="m20.143 12.256-7.114 7.114V1.713h-1.715V19.37L4.2 12.256l-1.2 1.2 8.571 8.571a.847.847 0 0 0 .6.257.846.846 0 0 0 .6-.257l8.572-8.571-1.2-1.2Z"></path></svg>
+                    Request
+                </a>
+                <button type="button" disabled id="action-button--previous" class="action-button--horizontal-scroll">
+                    <svg width="16" height="16" fill="currentColor" focusable="false" viewBox="0 0 24 24"><path d="M12.771 7.115a.829.829 0 0 0-1.2 0L3 15.686l1.2 1.2 7.971-7.971 7.972 7.971 1.2-1.2-8.572-8.571Z"></path></svg>
+                </button>
+                <button type="button" id="action-button--next" class="action-button--horizontal-scroll">
+                    <svg width="16" height="16" fill="currentColor" focusable="false" viewBox="0 0 24 24"><path d="M12.771 7.115a.829.829 0 0 0-1.2 0L3 15.686l1.2 1.2 7.971-7.971 7.972 7.971 1.2-1.2-8.572-8.571Z"></path></svg>
+                </button>
+            </div>
+            <div id="bank-accounts">
+                <a href="#uk" class="bank-account">   
+                    <img
+                        class="flag"
+                        aria-hidden="true"
+                        src="assets/uk.png" 
+                        alt="UK"
+                    >
+                    <div>
+                        <h2 role="presentation">
+                           12150.25
+                        </h2>
+                        <div class="currency">
+                            British Pound
+                        </div>
+                    </div>          
+                </a>
+                <a href="#usa" class="bank-account">                    
+                    <img
+                        class="flag"
+                        aria-hidden="true"
+                        src="assets/usa.png" 
+                        style="object-position: -11px center;"
+                        alt="US"
+                    >
+                    <div>
+                        <h2 role="presentation">
+                            15150.25
+
+                        </h2>
+                        <div class="currency">
+                            US Dollar
+                        </div>
+                    </div>  
+                </a>
+                <a href="#eu" class="bank-account">                    
+                    <img
+                        class="flag"
+                        aria-hidden="true"
+                        src="assets/eu.png" 
+                        alt="EU"
+                    >
+                    <div>
+                        <h2 role="presentation">
+                            7250.15
+                        </h2>
+                        <div class="currency">
+                            Euro
+                        </div>  
+                    </div>
+                </a>
+                <a href="#cz" class="bank-account">           
+                    <img
+                        class="flag"
+                        aria-hidden="true"
+                        src="assets/cz.png" 
+                        alt="Czech Republic"
+                    >
+                    <div>
+                        <h2 role="presentation">
+                            150055.25
+                        </h2>
+                        <div class="currency">
+                            Czech Koruna
+                        </div>
+                    </div>         
+                </a>
+                <a href="#chf" class="bank-account">           
+                    <img
+                        class="flag"
+                        aria-hidden="true"
+                        src="assets/chf.png" 
+                        alt="Czech Republic"
+                    >
+                    <div>
+                        <h2 role="presentation">
+                            2456.88
+                        </h2>
+                        <div class="currency">
+                            Swiss Franc
+                        </div>
+                    </div>         
+                </a>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
+
+
+
+

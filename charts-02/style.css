@@ -1,0 +1,35 @@
+:root {
+    --background: #070707;
+    --background-widget: #181818;
+    --primary: #3DA06E;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background);
+    height: 100vh;
+}
+
+.widget {
+    border-radius: 0.75rem;
+    background-color: var(--background-widget);
+    padding: 1rem;
+    max-width: 40rem;
+    width: 100%;
+    min-width: 20rem;
+}
+
+.widget canvas {
+    min-height: 20rem;
+}
+

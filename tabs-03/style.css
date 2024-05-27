@@ -1,0 +1,249 @@
+:root {
+    --background: #3C3353;
+    --tabs-bg: #261E35;
+    --text-color: white;
+    --primary: #ECB22E;
+    --link-color: white;
+}
+
+body {
+    font-family: Mulish, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: var(--text-color);
+    background: var(--background);
+    user-select: none;
+    padding: 1rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 2rem;
+    width: 100%;
+    max-width: 40rem;
+    min-height: 36rem;
+    border-radius: 1.5rem;
+    background-color: var(--tabs-bg);
+}
+
+.container-trending {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.container-headline {
+    width: 100%;
+    display: flex;
+    gap: 0.5rem;
+    font-weight: 700;
+    align-items: center;
+}
+
+.container-headline svg {
+    color: var(--text-color);
+    height: 2rem;
+    width: 2rem;
+}
+
+.container-description {
+    width: 100%;
+}
+
+header {
+    position: relative;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content--active {
+    display: block;
+    overflow: auto;
+}
+
+.tabs {
+    position: relative;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: nowrap;
+    margin-bottom: 0.75rem;
+    overflow-x: auto;
+}
+
+.tabs>a {
+    position: relative;
+    display: flex;
+    text-decoration: none;
+    padding: 0.5rem;
+    white-space: nowrap;
+    font-weight: 600;
+    text-align: left;
+    justify-content: start;
+    color: var(--text-color);
+    transition: all 0.2s ease-in-out;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tabs>a:hover {
+    color: var(--primary);
+}
+
+.tabs>a img {
+    height: 1.25rem;
+    width: 1.25rem;
+}
+
+.tabs>.active {
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.tabs>a>svg {
+    stroke: var(--white);
+}
+
+.tabs>.active>svg {
+    stroke: var(--primary-blue);
+}
+
+.record {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: center;
+    gap: 0.75rem;
+    min-height: 4rem;
+    padding: 1rem 0;
+    opacity: 1;
+}
+
+.record .avatar {
+    display: block;
+    border-radius: 1rem;
+    flex-grow: 0;
+    height: 4rem;
+    width: 4rem;
+    object-fit: cover;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 100%;
+    min-width: 28rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content .title {
+    font-weight: 700;
+    display: flex;
+    color: var(--text-color);
+    gap: 0.5rem;
+    white-space: nowrap;
+}
+
+.content .title a {
+    display: flex;
+    align-items: center;
+    color: var(--link-color);
+    gap: 0.25rem;
+    text-decoration: none;
+}
+
+.content .title a:hover {
+    text-decoration: underline;
+}
+
+.content .title img {
+    width: 1rem;
+    height: 1rem;
+}
+
+.content .description {
+    font-size: smaller;
+}
+
+.title-description {
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color);
+}
+
+.switch-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content:
+        space-between;
+    margin-left: auto;
+}
+
+.switch__label {
+    white-space: nowrap;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 4rem;
+    min-width: 4rem;
+    height: 2rem;
+    margin-left: auto;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: var(--background);
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.5rem;
+    width: 1.5rem;
+    left: 0.25rem;
+    bottom: 0.25rem;
+    background: var(--text-color);
+    transition: .4s;
+}
+
+.switch input:checked+.slider {
+    background: var(--primary);
+}
+
+.switch input:checked+.slider:before {
+    transform: translateX(1.92rem);
+}
+
+.slider.round {
+    border-radius: 2rem;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}

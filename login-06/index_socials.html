@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login Example</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form class="my-form">
+        <div class="login-welcome-row">
+            <a href="#" title="Logo">
+                <img src="assets/logo.svg" alt="Logo" class="logo">
+            </a>
+            <h1>Welcome back &#x1F44F;</h1>
+            <p>Please enter your details!</p>
+        </div>
+        <div class="input__wrapper">
+            <input 
+                type="email" id="email" name="email" class="input__field" 
+                placeholder="Your Email" required autocomplete="off">
+            <label for="email" class="input__label">Email:</label>
+            <!-- svg email -->
+        </div>
+        <div class="input__wrapper">
+            <input id="password" type="password" class="input__field" placeholder="Your Password"
+                title="Minimum 6 characters at least 1 Alphabet and 1 Number"
+                pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$" required autocomplete="off">
+            <label for="password" class="input__label">
+                Password
+            </label>
+            <!-- svg password -->
+        </div>
+        <button type="submit" class="my-form__button">
+            Login
+        </button>
+        <div class="socials-row">
+            <a href="#" title="Use Google">
+                <img src="assets/google.png" alt="Google">
+                Log in with Google
+            </a>
+        </div>
+        <div class="my-form__actions">
+            <div class="my-form__row">
+                <span>Don't have an account?</span>
+                <a href="#" title="Create Account">
+                    Sign Up
+                </a>
+            </div>
+        </div>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

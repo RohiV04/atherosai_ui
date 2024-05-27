@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tabs</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+            rel="stylesheet"
+            type='text/css'
+        >
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="dist/purify.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <div class="tabs">
+                    <a id="tab1" name="all" href="#tab1">
+                        All
+                    </a>
+                    <a id="tab2" name="user" href="#tab2">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            stroke-width="2" stroke="#9D9D9D" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path>
+                            <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
+                        </svg>
+                        Users
+                    </a>
+                    <a id="tab3" name="file" href="#tab3">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M15 7l-6.5 6.5a1.5 1.5 0 0 0 3 3l6.5 -6.5a3 3 0 0 0 -6 -6l-6.5
+                                     6.5a4.5 4.5 0 0 0 9 9l6.5 -6.5">
+                            </path>
+                        </svg>
+                        Files
+                    </a>
+                </div>
+            </header>
+            <div class="tab-content-wrapper">
+                <div id="tab1-content" class="tab-content">
+                </div>
+                <div id="tab2-content" class="tab-content">
+                </div>
+                <div id="tab3-content" class="tab-content">
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
+
+

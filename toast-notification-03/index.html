@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Snackbar</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+            rel="stylesheet"
+        >
+    </head>
+    <body>
+        <button class="trigger-button" onclick="toggleNotification()">
+            Toggle Snackbar
+        </button>
+        <figure class="notification hide none">
+            <div class="notification__body">
+                <div class="notification__body__first">
+                    <svg focusable="false" viewBox="0 0 24 24">
+                        <path d="M20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,
+                                 8 0 0,1 12,4C12.76,4 13.5,4.11 14.2, 
+                                 4.31L15.77,2.74C14.61,2.26 13.34,2 
+                                 12,2A10,10 0 0,0 2,12A10,10 0 0,0 
+                                 12,22A10,10 0 0, 0 22,12M7.91,10.08L6.5,11.5L11,
+                                 16L21,6L19.59,4.58L11,13.17L7.91,10.08Z"
+                        ></path>
+                    </svg>
+                    <p>
+                        Your account has been created! &#128640;
+                    </p>
+                </div>
+                <svg
+                    onclick="toggleNotification()"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M18 6l-12 12"></path>
+                    <path d="M6 6l12 12"></path>
+                </svg>
+            </div>
+        </figure>
+        <script src="script.js"></script>           
+    </body>
+</html>
+
+

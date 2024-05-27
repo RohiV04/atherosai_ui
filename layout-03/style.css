@@ -1,0 +1,22 @@
+.container {
+    font-family: 'Segoe UI', Tahoma;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.flex-item {
+    background: #F4BD50;
+    font-size: 1.5rem;
+    display: flex;
+    height: 3.75rem;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    flex-basis: 6.25rem;
+}
+
+.flex-item:nth-child(even) {
+    background: #c7a4ff;
+}
+

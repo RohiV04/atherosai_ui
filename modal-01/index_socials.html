@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        Share the link
+    </title>
+
+    <!--? loading Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <button type="button" class="share-btn">
+        <!-- share btn -->
+    </button>
+    <dialog class="copy-link-dialog">
+        <form>
+            <header>
+                <h2>Share the link</h2>
+                <button class="close-btn secndary" type="button">
+                    <!-- share the link -->
+                </button>
+            </header>
+            <div class="copy-link-dialog__content">
+                <div class="copy-link-wrapper">
+                    <input 
+                        id="copy-link-input" type="text" 
+                        required value="https://example.com/share-this" 
+                        readonly
+                    >
+                    <button class="copy-btn" type="button">
+                        <!-- copy link -->
+                        <span id="copy-text">
+                            Copy Link
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </dialog>
+    <script src="script.js"></script>
+</body>
+

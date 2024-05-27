@@ -1,0 +1,117 @@
+
+
+:root {
+    --white: #FFF;
+    --gray: #F3F3F3;
+    --gray-mid: #9D9D9D;
+    --gray-dark: #3e3e3e;
+    --gray-hover: #F7F7F7;
+    --body-background: #dfdfdf;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 1rem;
+    background-color: var(--body-background);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.tabs-container {
+	padding: 1rem;
+    width: 100%;
+    max-width: 30rem;
+    min-width: 20rem;
+    display: flex;
+	margin: 0.75rem;
+	border-radius: 1rem;
+    background-color: var(--white);
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;	
+}
+
+header {
+    position: relative;
+}
+
+.tab-content-wrapper {
+    overflow-y: hidden;
+    overflow-x: auto;
+    height: 18.75rem;
+    transition: all 0.45s ease-in-out;
+    padding: 0 1rem;
+}
+
+.tab-content h2 {
+    color: var(--gray-dark);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.tab-content {
+    font-size: 0.8rem;
+    min-height: 18.75rem;
+    min-width: 15rem;
+    overflow-x: auto;
+    transition: all 0.45s ease-in-out;
+}
+
+.tabs {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #F0F0F0;
+    list-style-type: none;
+    padding-right: 1rem;
+    gap: 0.5rem;
+}
+
+.tabs a {
+    position: relative;
+    display: flex;
+    text-decoration: none;
+    width: 100%;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--gray-mid);
+    text-align: left;
+    border-radius: 0.5rem;
+    justify-content: start;
+    padding: 0.75rem;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.tabs a img {
+    height: 1.25rem;
+    width: 1.25rem;
+}
+
+.tabs .active, .tabs a:hover {
+    font-weight: 700;
+    outline: none;
+    color: white;
+    background-color: var(--gray-dark);
+}
+
+.tabs a svg {
+    stroke: var(--gray-mid);
+}
+
+.tabs .active svg {
+    stroke: var(--white);
+}
+
+.tabs a:hover svg {
+    stroke: var(--white);
+}

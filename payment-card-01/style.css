@@ -1,0 +1,259 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Mulish',
+        sans-serif;
+    font-size: 16px;
+    background: #f8f8ff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.logo {
+    width: 4rem;
+    margin-right: -0.25rem;
+}
+
+.card {
+    margin-top: 16rem;
+    min-width: 26rem;
+    height: 16rem;
+    border-radius: 1rem;
+    perspective: 500px;
+    position: relative;
+    cursor: pointer;
+    font-family: monospace;
+}
+
+.card__inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    transition: transform 600ms ease;
+    transform-style: preserve-3d;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin: 0 auto;
+}
+
+
+
+.card:hover .card__inner {
+    transform: rotateY(180deg);
+}
+
+.card__front,
+.card__back {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.6rem;
+    overflow: hidden;
+    backface-visibility: hidden;
+    color: #fff;
+    background: #000000;
+    background:
+        url(assets/bg-card.jpg);
+    background-size: cover;
+}
+
+.card__front {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 1rem;
+}
+
+.card__back {
+    transform: rotateY(180deg);
+}
+
+.logo {
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    z-index: 2;
+}
+
+.chip {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 2.5rem;
+    top: 3.25rem;
+    border-radius: 0.3rem;
+    background-image:
+        linear-gradient(to bottom left,
+            #ffecc7, #d0b978);
+    overflow: hidden;
+}
+
+.chip .chip-line {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #303030;
+}
+
+.chip .chip-line:nth-child(1) {
+    top: 13px;
+}
+
+.chip .chip-line:nth-child(2) {
+    top: 20px;
+}
+
+.chip .chip-line:nth-child(3) {
+    top: 28px;
+}
+
+.chip .chip-line:nth-child(4) {
+    left: 25px;
+    width: 1px;
+    height: 50px;
+}
+
+.chip .chip-main {
+    width: 1.25rem;
+    height: 1.45rem;
+    border: 1px solid #333;
+    border-radius: 0.1875rem;
+    background-image:
+        linear-gradient(to bottom left,
+            #efdbab, #e1cb94);
+    z-index: 1;
+}
+
+.wave {
+    position: absolute;
+    left: 4.5rem;
+    top: 4.25rem;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.card-number {
+    display: flex;
+    margin-top: auto;
+    gap: 1.75rem;
+    font-size: 1.6rem;
+}
+
+.card-holder {
+    text-transform: uppercase;
+}
+
+.card-info__bottom {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-info__right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.mastercard {
+    display: flex;
+}
+
+.mastercard .circle {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+
+.mastercard .circle--red {
+    background: #eb001b;
+}
+
+.mastercard .circle--yellow {
+    margin-left: -0.7rem;
+    background: rgba(255, 209, 0, 0.6);
+}
+
+.card-holder,
+.card-number,
+.exp-date,
+.card-signature-headline {
+    background-image:
+        linear-gradient(to bottom, #ededed 30%,
+            #c2c2c2 70%),
+        linear-gradient(120deg, transparent 10%,
+            white 40%, white 60%,
+            transparent 90%);
+
+    background-size: cover, cover, 200%;
+    background-position: 50% 50%;
+    background-blend-mode: overlay;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    filter: drop-shadow(1px 1px 1px rgba(black, 0.3));
+}
+
+.card-strip {
+    min-height: 3rem;
+    width: 100%;
+    margin-top: 2.5rem;
+    background: #000000;
+}
+
+.card-signature {
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #021318;
+    font-family: 'Allura', cursive;
+    padding: 0.25rem 2.5rem;
+    font-size: 1.25rem;
+    height: 2rem;
+    font-weight: bold;
+    width: 15rem;
+}
+
+.card-ccv {
+    background: white;
+    height: 1.5rem;
+    font-weight: bold;
+    padding: 0 0.25rem;
+    display: flex;
+    align-self: end;
+    align-items: center;
+    margin-bottom: 0.25rem;
+}
+
+.card-signature-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.card-signature-headline {
+    content: 'Authorized Signature';
+    color: white;
+    font-size: 0.75rem;
+}
+
+.card-signature-wrapper {
+    margin-top: 2rem;
+    display: flex;
+    gap: 0.5rem;
+    color: black;
+    padding: 0 2rem;
+}

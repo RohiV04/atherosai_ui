@@ -1,0 +1,45 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Input 03</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" 
+          rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="box">
+        <div class="input__wrapper">
+            <input 
+                id="password" 
+                type="password" 
+                name="password" 
+                placeholder="Your Password" 
+                title="Minimum 6 characters at least 1 Alphabet and 1 Number" 
+                pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$"
+                required class="input__field"
+            >
+            <label for="password" class="input__label">
+                Password
+            </label>
+            <img 
+                alt="Eye Icon" title="Eye Icon" 
+                src="assets/eye.svg" class="input__icon"
+            >
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+

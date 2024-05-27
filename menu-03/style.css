@@ -1,0 +1,290 @@
+
+
+:root {
+    --notification: #58A6FF;
+    --github-dark: #010409;
+    --github-dark-lighter: #0D1117;
+    --github-dark-border: #30363D;
+    --github-button-hover: #8B949E;
+    --background: #171B20;
+    --color: #828B94;
+    --github: #C9D1D9;
+    --navigation-hover: #292F36;
+    --navbar-height: 4rem;
+}
+
+body {
+    font-family: "Segoe UI", "Noto Sans", sans-serif;
+    font-size: 16px;
+    user-select: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu__wrapper {
+    display: flex;
+    position: fixed;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+    z-index: 2;
+    gap: 1.5rem; 
+    background-color: var(
+        --github-dark
+    );
+    height: var(--navbar-height);
+    padding: 0px 1rem;
+    border-bottom: 1px solid var(--github-dark-border);
+    align-items: center;
+}
+
+.logo__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.page__title {
+    color: var(--github);
+    padding: 0.5rem 0.75rem;
+    align-items: center;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    transition: all 0.45s ease-in-out;
+    text-decoration: none;
+}
+
+.page__title:hover {
+    background: var(--background);
+}
+
+.notification-mark {
+    width: 0.5rem;
+    height: 0.5rem;
+    top: -0.2rem;
+    right: -0.2rem;
+    border-radius: 50%;
+    position: absolute;
+    background: var(--notification);
+}
+
+@media (max-width: 400px) {
+    .page__title {
+        display: none;
+    }
+}
+
+.logo {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}
+
+.logo svg {
+    fill: var(--github);
+}
+
+.action-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: auto;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.action-button {
+    position: relative;
+    display: grid;
+    grid-auto-columns: max-content;
+    width: 2rem;
+    height: 2rem;
+    transition: all 0.45s ease-in-out;
+    color: var(--github-dark-lighter);
+    background: transparent;
+    border: 1px solid var(--github-dark-border);
+    border-radius: 6px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.action-button:hover {
+    background: var(--github-dark-lighter);
+    border: 1px solid var(--github);
+}
+
+.action-button svg {
+    fill: var(--github-button-hover);
+}
+
+.avatar-profile {
+    cursor: pointer;
+    height: 2rem;
+    width: 2rem;
+    border: 1px solid var(--github-dark-border);
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.navigation__menu {
+    background-color: var(
+        --background
+    );
+    z-index: 3;
+    border-left: 1px solid var(--github-dark-border);
+    height: 100vh;
+    opacity: 1;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 0.75rem;
+    right: 0;
+    position: fixed;
+    box-shadow: 
+    rgba(100, 100, 111, 0.2)
+    0px 7px 29px 0px;
+    animation: fadeInAnimation 
+    ease-in-out 0.5s forwards;
+}
+
+.navigation__menu__items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    list-style-type: none;
+    margin: 0;
+    margin-top: 1rem;
+    padding: 0;
+    color: var(--github-button-hover);
+}
+
+.navigation__menu__items > li {
+    display: flex;
+    gap: 0.625rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    height: 2.25rem;
+    border-radius: 0.4rem;
+    align-items: center;
+    white-space: nowrap;
+    cursor: pointer;
+    color: var(--color);
+    padding: 0px 0.5rem;
+    transition: all 0.45s ease-in-out;
+}
+
+.navigation__menu__items > li:hover {
+    background-color: var(--navigation-hover);
+    color: var(--github);
+}
+
+.navigation__menu__items > li > svg {
+    min-width: 1rem;
+    fill: var(--github);
+}
+
+.navigation__menu__items > .separator {
+    display: flex;
+    align-items: center;
+    height: 0.4rem;
+    padding: 0;
+}
+
+.navigation__menu__items > .separator:hover  {
+    background-color: var(--background);
+}
+
+.navigation__menu__items > .separator > hr {
+    border: 1px solid var(--github-dark-border);
+    width: 100%;
+}
+
+.avatar-wrapper {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.avatar-wrapper 
+.avatar-profile {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.avatar-name-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.avatar-name-alias {
+    color: var(--github);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.avatar-name {
+    color: var(--color);
+    font-size: 0.75rem;
+    white-space: nowrap;
+}
+
+.close-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.4rem;
+    margin-left: auto;
+    cursor: pointer;
+    height: 2rem;
+    width: 2rem;
+    transition: all 0.45s ease-in-out;
+}
+
+.close-button:hover {
+    background-color: var(--navigation-hover);
+}
+
+.close-button svg {
+    height: 1rem;
+    width: 1rem;
+    fill: var(--github);
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        max-width: 0;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        max-width: 20rem;
+    }
+}
+
+.none {
+    display: none;
+}
+
+.hide {
+    animation: fadeOutAnimation ease-in-out 0.5s forwards;
+}
+
+
+@keyframes fadeOutAnimation {
+    0% {
+        opacity: 1;
+        max-width: 20rem;
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        max-width: 0;
+        visibility: hidden;
+    }
+}

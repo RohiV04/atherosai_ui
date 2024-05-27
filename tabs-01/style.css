@@ -1,0 +1,175 @@
+
+body {
+    font-family: 'Poppins';
+    background-color: #dfdfdf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+:root {
+    --white: #FFF;
+    --gray: #F3F3F3;
+    --gray-mid: #9D9D9D;
+    --gray-dark: #3e3e3e;
+    --gray-hover: #F7F7F7;
+}
+
+.container {
+	height: 22.5rem;
+	width: 22.5rem;
+	padding: 1.25rem;
+	margin: 0.675rem;
+	border-radius: 1rem;
+    background-color: var(--white);
+	box-shadow: 
+        rgba(100, 100, 111, 0.2)
+        0px 7px 29px 0px;	
+}
+
+header {
+    position: relative;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content--active {
+    display: block;
+}
+
+.tabs {
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: nowrap;
+    border-bottom: 1px solid #F0F0F0;
+}
+
+.tabs > a {
+    position: relative;
+    display: flex;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--gray-mid);
+    text-align: left;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tabs > a img {
+    height: 1.25rem;
+    width: 1.25rem;
+}
+
+.tabs > .active {
+    font-weight: 700;
+    outline: none;
+    color: var(--gray-dark);
+    margin-bottom: -1px;
+    border-bottom: 1px solid var(--gray-dark);
+}
+
+.tabs > a > svg {
+    stroke: var(--gray-mid);
+}
+
+.tabs > .active > svg {
+    stroke: var(--gray-dark);
+}
+
+.record {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: center;
+    gap: 0.75rem;
+    border-bottom: 1px solid #F0F0F0;
+    padding: 1rem 0.75rem;
+}
+
+.record:hover, .record:focus {
+    background-color: var(--gray-hover);
+    outline: none;
+    cursor: pointer;
+}
+
+.record:hover .avatar__wrapper {
+    background-color: #E5E5E5;
+}
+
+.record .avatar {
+    display: block;
+    border-radius: 0.5rem;
+    flex-grow: 0;
+    object-fit: cover;
+}
+
+.avatar--user {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.avatar--file {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.record .avatar__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 0;
+    position: relative;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    background-color: #F7F7F7;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;   
+}
+
+.content > .title {
+    font-weight: 700;
+}
+
+.content > .description {
+    font-size: smaller;
+}
+
+.status {
+    position: absolute;
+    right: -0.25rem;
+    bottom: -0.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.125rem;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.status__inner {
+    height: 0.625rem;
+    width: 0.625rem;
+    border-radius: 50%;
+}
+
+.status__inner--active {
+    background-color: #00C853;
+}
+
+.status__inner--inactive {
+    background-color: #F4BD50;
+}
+
+/* inspired by https://dribbble.com/shots/17399694-Search-Results-Animation */

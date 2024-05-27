@@ -1,0 +1,167 @@
+
+:root {
+    --primary: #111111;
+    --primary-light: #333333;
+    --white: #fff;
+    --background: #F8F8FF;
+    --text: #262626;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  background: #F8F8FF;
+  font-family: 'Inter', sans-serif;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  max-width: 40rem;
+  width: 100%;
+  padding: 3rem 2rem 3rem 1.25rem;
+  background: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 
+    2px 6px;
+  border-radius: 1.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.card__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  margin-left: 2rem;
+}
+
+.card:hover {
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.1) 
+    0px 6px 12px;
+}
+
+.card__preview {
+  position: relative;
+}
+
+.card__preview img {
+  max-width: 18rem;
+  width: 32vw;
+  height: 18rem;
+  object-fit: cover;
+  margin-left: -4rem;
+  border-radius: 1.5rem;
+}
+
+.card__price {
+  background: var(--white);
+  color: var(--text);
+  z-index: 1;
+  position: absolute;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  top: 1.25rem;
+  right: 1.25rem;
+  font-weight: bold;
+}
+
+.card__content {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 8;
+}
+
+.card__footer {
+  margin-top: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.card__address {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.card h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 1.075rem;
+  font-weight: 400;
+}
+
+.cta {
+  background: var(--primary);
+  color: var(--white);
+  font-family: inherit;
+  padding: 1rem 1.5rem;
+  font-size: 1.125rem;
+  border-radius: 2.5rem;
+  border: 0;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.cta:hover {
+  background: var(--primary-light);
+}
+
+@media (width <= 740px) {
+  .card {
+    margin: 0 2.25rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .card__content {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 7;
+  }
+
+  .card__right {
+    margin-left: 0;
+  }
+
+  .card h2 {
+    margin-right: 0;
+    font-size: 1.5rem;
+  }
+
+  .card img {
+    margin: -6rem 0 2rem 0;
+    width: 100%;
+    max-width: 25rem;
+  }
+
+  .card__price {
+    top: -4.75rem;
+  }
+
+  .card__footer {
+    justify-content: center;
+  }
+}

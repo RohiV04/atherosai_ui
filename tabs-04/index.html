@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tabs Integrations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet" type='text/css'>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="dist/purify.min.js"></script>
+</head>
+
+<body>
+    <article class="job-board">
+        <div class="job-board__top">
+            <div class="job-board__headline">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-briefcase"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" /><path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" /><path d="M12 12l0 .01" /><path d="M3 13a20 20 0 0 0 18 0" /></svg>
+                <h2>
+                    Job board
+                </h2>
+            </div>
+            <div class="job-board__description">
+                Find a job you love!
+            </div>
+        </div>
+        <header>
+            <div class="tabs">
+                <a id="tab1" name="all" href="#tab1">
+                    New
+                </a>
+                <a id="tab4" name="remote" href="#tab4">
+                    Remote
+                </a>
+                <a id="tab3" name="on-site" href="#tab3">
+                    On-Site
+                </a>
+                <a id="tab2" name="hybrid" href="#tab2">
+                    Hybrid
+                </a>
+            </div>
+        </header>
+        <div class="tab-content-wrapper">
+            <div id="tab1-content" class="tab-content">
+            </div>
+            <div id="tab2-content" class="tab-content">
+            </div>
+            <div id="tab3-content" class="tab-content">
+            </div>
+            <div id="tab4-content" class="tab-content">
+            </div>
+        </div>
+    </article>
+    <script src="script.js"></script>
+</body>
+
+</html>

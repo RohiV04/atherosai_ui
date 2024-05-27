@@ -1,0 +1,111 @@
+:root {
+    --background: #ECF0F4;
+    --white: white;
+    --gray-light: #FAFBFC;
+    --gray-borders: #ECF1F4;
+    --gray-dark: #AEB7C2;
+    --primary: #4D78C9;
+}
+
+/* CSS reset */
+*, *:before, *:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--background);
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: cover;
+}
+
+.discussion {
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    margin: 1rem;
+    width: 100%;
+    min-width: 17.5rem;
+    max-width: 25rem;
+}
+
+.discussion__header {
+    background-color: var(--gray-light);
+    border-bottom: var(--gray-borders);
+    display: flex;
+    gap: 0.5rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+    overflow: hidden;
+    padding: 1rem;
+    width: 100%;
+}
+
+.discussion__header textarea {
+    border: 1px solid var(--gray-borders);
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    height: 3rem;
+    transition: height 0.3s ease-in-out;
+    resize: none;
+    width: 100%;
+}
+
+.discussion__header textarea:focus {
+    outline: none;
+    height: 5rem;
+    border: 1px solid var(--primary);
+}
+
+.comment {
+    display: flex;
+    padding: 1rem;
+    min-height: 6rem;
+    gap: 0.25rem;
+    border-bottom: 1px solid var(--gray-borders);
+}
+
+.newcomment__toolbar {
+    justify-content: end;
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.25rem;
+}
+
+.newcomment__toolbar button {
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.button--primary {
+    background-color: var(--primary);
+    color: var(--white);
+    min-width: 5rem;
+}
+
+.comment__text {
+    font-size: 0.75rem;
+}
+
+.comment__author {
+    font-size: 0.8rem;
+}
+
+.comment__date {
+    font-size: 0.75rem;
+    margin-left: 0.25rem;
+    color: var(--gray-dark);
+}

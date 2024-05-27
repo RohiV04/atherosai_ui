@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+    --primary: #3ECF8E;
+    --primary-dark: #37996B;
+    --primary-darker: #317F5A;
+    --text: #F9F9F9;
+    --background: #1C1C1C;
+    --secondary: #2E2E2E;
+    --gray-border: #3E3E3E;
+    --gray-border-hover: #505050;
+    --gray-menu-button: #7E7E7E;
+    --gray-menu-button-hover: #232323;
+    --navbar-height: 4rem;
+    --gray-text-hover: #8F8F8F;
+    --gray-icon: #A0A0A0;
+
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    background-color: var(--background);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    width: 100vw;
+    border-bottom: 1px solid var(--gray-border);
+    height: var(--navbar-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu__wrapper {
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    z-index: 2;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 60rem;
+    padding: 0px 1rem;
+    align-items: center;
+}
+
+.menu__bar {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 1.5rem;
+}
+
+.navigation {
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--background);
+}
+
+.navigation>li {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    align-items: center;
+    min-height: 2.25rem;
+}
+
+.navigation>li>a {
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.navigation>li>a:hover {
+    color: var(--primary);
+}
+
+.navigation>li>button {
+    color: var(--text);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    margin-right: -0.25rem;
+    align-items: center;
+    min-height: 2.25rem;
+    font-size: 14px;
+    gap: 0.25rem;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+    flex-wrap: nowrap;
+    padding: 0.25rem 0.7rem;
+    white-space: nowrap;
+    background: none;
+    display: flex;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+.navigation>li>button>svg {
+    margin-top: 2px;
+    fill: var(--text);
+    transition: all 0.2s ease-in-out;
+}
+
+
+.navigation>li:hover>button svg {
+    fill: var(--primary);
+    transform: rotate(0.5turn);
+}
+
+.navigation>li:hover>button {
+    color: var(--primary);
+}
+
+.navigation>li:hover .dropdown {
+    display: block;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.99) translateY(-0.7em);
+        transform-origin: top;
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* dropdown menu */
+.dropdown__wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 5rem;
+}
+
+.dropdown {
+    border-radius: 0.5rem;
+    display: none;
+    padding: 0.5rem;
+    width: 100%;
+    max-width: 600px;
+    border: 1px solid var(--gray-border);
+    z-index: 2;
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+.list-items-with-description {
+    list-style-type: none;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 0.75rem;
+}
+
+.list-items-with-description li {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+.list-items-with-description li:hover {
+    background-color: var(--secondary-background);
+    border-radius: 0.3rem;
+}
+
+.icon-wrapper svg {
+    color: var(--gray-text-hover);
+}
+
+
+.list-items-with-description li:hover svg {
+    color: var(--text);
+}
+
+.list-items-with-description li .icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    min-width: 2.5rem;
+    min-height: 2.5rem;
+    pointer-events: all;
+    background-color: var(--gray-menu-button-hover);
+}
+
+
+.item-title {
+    gap: 0.5rem;
+}
+
+.item-title h3 {
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--text);
+}
+
+.list-items-with-description li:hover .item-title p {
+    color: var(--gray-text-hover);
+}
+
+.item-title p {
+    font-size: 12px;
+    white-space: nowrap;
+    color: var(--gray-menu-button);
+}
+
+/* login sign-up buttons */
+
+.action-buttons {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.action-buttons a {
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 0.25rem 0.5rem;
+    transition: all 0.2s ease-in-out;
+    line-height: 1.25rem;
+}
+
+.secondary {
+    background: none;
+    color: var(--text);
+    outline: none;
+    border: 1px solid var(--gray-border);
+    border-radius: 0.5rem;
+}
+
+.secondary:hover {
+    border: 1px solid var(--gray-border-hover);
+}
+
+.primary {
+    color: var(--text);
+    border-radius: 0.5rem;
+    background-color: var(--primary-dark);
+    border: 1px solid var(--primary);
+    padding: 0.5rem 1rem;
+}
+
+.primary:hover {
+    background-color: var(--primary-darker);
+}
+
+
+.burger-menu {
+    display: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+
+@media (max-width: 44rem) {
+    .hide {
+        display: none;
+    }
+
+    .burger-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        height: 2.5rem;
+        width: 2.5rem;
+        min-width: 2.5rem;
+        min-height: 2.5rem;
+        pointer-events: all;
+    }
+
+    .burger-menu:hover {
+        background-color: var(--gray-menu-button-hover);
+    }
+
+    .burger-menu:focus {
+        outline: 1px solid var(--primary);
+    }
+
+
+    .burger-menu svg {
+        height: 1.5rem;
+        stroke: var(--gray-menu-button);
+        width: 1.5rem;
+    }
+}

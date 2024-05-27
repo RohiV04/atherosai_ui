@@ -1,0 +1,164 @@
+
+
+:root {
+    --primary: #625BFE;
+    --text: #0F192D;
+    --text-gray: #5A678C;
+    --gray: #c0bcff;
+    --error: #E3452F;
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    height: 80px;
+    padding: 0 16px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: var(--primary);
+    justify-content: end;
+}
+
+.navigation__group {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.navigation__group > .icon {
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    transition: all 0.2s ease-in-out;
+}
+
+.navigation__group > .icon:hover {
+    transform: scale(1.1);
+}
+
+.user-name {
+    font-size: 14px;
+    font-weight: 700;
+    text-align: left;
+    color: var(--text);
+}
+
+.profile {
+    display: block;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 3px solid #f7f7f7;
+    filter: drop-shadow(-20px 0 10px rgba(0, 0, 0, 0.1));
+}
+
+.profile:hover {
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+}
+
+.email {
+    color: var(--text-gray);
+}
+
+
+.dropdown__wrapper {
+    width: 240px;
+    top: 88px;
+    right: 16px;
+    position: absolute;
+    border-radius: 8px;
+    border: 1px solid var(--text-gray);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    animation: fadeOutAnimation ease-in-out 0.3s forwards;
+}
+
+.dropdown__wrapper--fade-in {
+    animation: fadeInAnimation ease-in-out 0.3s forwards;
+}
+
+.none {
+    display: none;
+}
+
+.hide {
+    opacity: 0;
+    visibility: hidden;
+    animation: fadeOutAnimation ease-in-out 0.3s forwards;
+}
+
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        width: 160px;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        width: 240px;
+    }
+}
+
+@keyframes fadeOutAnimation {
+    0% {
+        opacity: 1;
+        width: 240px;
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        width: 160px;
+        visibility: hidden;
+    }
+}
+
+.dropdown__group {
+    padding: 12px;
+}
+
+.divider {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+nav > ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 4px;
+}
+
+nav > ul > li {
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    padding-left: 8px;
+    width: 100%;
+}
+
+nav > ul > li > img {
+    height: 24px;
+    width: 24px;
+}
+
+nav > ul > li:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}

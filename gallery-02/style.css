@@ -1,0 +1,55 @@
+
+:root {
+    --background: #3C343D;
+    --background-card: #6B626C;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+
+body {
+    background: var(--background);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.gallery {
+    display: flex;
+    left: calc(50% - 19rem);
+}
+
+.card {
+    position: relative;
+    left: 0;
+    width: 7.5rem;
+    height: 10rem;
+    background: var(--background-card);
+    border-radius: 0.5rem;
+    transition: 1s ease-in-out;
+    overflow: hidden;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.5);
+}
+
+.card:not(:first-child) {
+    margin-left: -3rem;
+}
+
+.card:hover {
+    transform: translateY(-1rem);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.card:hover ~ .card {
+    left: 2rem;
+}
+
+.card img {
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 0.25rem;
+}

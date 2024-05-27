@@ -1,0 +1,177 @@
+
+
+:root {
+    --white: #FFF;
+    --gray: #F3F3F3;
+    --background: #060D23;
+    --tab-background: #383D4F;
+    --gray-dark: #3e3e3e;
+    --gray-hover: #F7F7F7;
+    --primary-blue: #00E0FE;
+    --blue-gray: #BBCFD5;
+}
+
+body {
+    font-family: 'Red Hat Display', 
+        sans-serif;
+    background: var(--gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+	padding: 1.25rem;
+	margin: 0.625rem;
+    max-width: 23.75rem;
+    width: 100%;
+    min-height: 25rem;
+	border-radius: 1rem;
+    background: var(--background);
+	box-shadow: rgba(100, 100, 111, 0.2) 
+    0px 7px 29px 0px;	
+}
+
+.container-top-ten {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    color: var(--blue-gray);
+}
+
+header {
+    position: relative;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content--active {
+    display: block;
+}
+
+.tabs {
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+    gap: 0.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    flex-wrap: nowrap;
+    border-bottom: 1px solid 
+    var(--tab-background);
+}
+
+.tabs > a {
+    position: relative;
+    display: flex;
+    text-decoration: none;
+    padding: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--white);
+    text-align: left;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tabs > a img {
+    height: 1.25rem;
+    width: 1.25rem;
+}
+
+.tabs > .active {
+    font-weight: 700;
+    outline: none;
+    border-radius: 0.5rem;
+    color: var(--primary-blue);
+    background: var(--tab-background);
+}
+
+.tabs > a:hover {
+    background: var(--tab-background);
+    border-radius: 0.5rem;
+}
+
+.tabs > a > svg {
+    stroke: var(--white);
+}
+
+.tabs > .active > svg {
+    stroke: var(--primary-blue);
+}
+
+.record {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--white);
+    height: 4rem;
+    opacity: 1;
+    padding: 1rem 0px;
+    animation: fadein 0.3s 
+    ease-in-out;
+}
+
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.record .avatar {
+    display: block;
+    border-radius: 1rem;
+    flex-grow: 0;
+    height: 4rem;
+    width: 4rem;
+    border: 1px solid var(
+        --tab-background);
+    object-fit: cover;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    gap: 1rem;
+    align-items: center;
+}
+
+.content .title {
+    font-weight: 700;
+    color: var(--white);
+}
+
+.content .description {
+    font-size: smaller;
+}
+
+.title-description {
+    display: flex;
+    flex-direction: column;
+    color: var(--blue-gray);
+}
+
+.explore-button {
+    text-decoration: none;
+    margin-left: auto;
+    border: 1px solid var(--white);
+    color: var(--white);
+    border-radius: 0.5rem;
+    height: fit-content;
+    padding: 0.375rem 0.5rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.explore-button:hover {
+    border: 1px solid var(--primary-blue);
+    color: var(--primary-blue);
+}

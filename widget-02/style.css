@@ -1,0 +1,145 @@
+:root {
+    --background: #EDEEF7;
+    --gray: #EDEEF7;
+    --white: #FCFCFC;
+    --green: #4ba61d;
+    --red: #e74c3c;
+    --background-widget: #060D23;
+    --stock-background: #383D4F;
+    --gray-dark: #3e3e3e;
+}
+
+body {
+    font-family: "Red Hat Display",
+        sans-serif;
+    font-size: 16px;
+    background-color: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.stock-watchlist-container {
+    padding: 1.5rem;
+    max-width: 25rem;
+    width: 100%;
+    background-color: var(--white);
+    border-radius: 2rem;
+    margin: auto;
+    box-shadow:
+        rgba(0, 0, 0, 0.05) 0px 6px 24px 0px;
+}
+
+
+.stock-watchlist-container h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    display: flex;
+    color: var(--gray-dark);
+    gap: 0.25rem;
+}
+
+.stock-watchlist-container h2 svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--gray-dark);
+}
+
+
+#stocks {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.stock-row {
+    position: relative;
+    z-index: 1;
+    min-height: 3.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border-radius: 1.5rem;
+    font-size: 1rem;
+    padding: 1rem;
+    align-items: center;
+    background-color: var(--white);
+    box-shadow:
+        rgba(0, 0, 0, 0.05) 0px 6px 24px 0px;
+}
+
+.stock-row:hover {
+    cursor: grab;
+}
+
+
+
+.stock-avatar {
+    width: 3.75rem;
+    height: 3.75rem;
+    padding: 0.5rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.stock-name {
+    display: grid;
+    gap: 0.125rem;
+}
+
+.stock-name h3 {
+    font-size: large;
+}
+
+.stock-name p {
+    font-size: smaller;
+}
+
+.stock-chosen {
+    box-shadow: 8px 8px 32px var(--gray);
+}
+
+.stock-drag {
+    opacity: 0;
+}
+
+.stock-info {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.price {
+    color: var(--green);
+    font-weight: 800;
+}
+
+.price--negative {
+    color: var(--red);
+}
+
+.change {
+    padding: 0.25rem 0.5rem;
+    background-color: var(--green);
+    color: var(--white);
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    min-width: 3.75rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+}
+
+.change--negative {
+    background-color: var(--red);
+}

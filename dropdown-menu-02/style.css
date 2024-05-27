@@ -1,0 +1,197 @@
+
+
+:root {
+    --primary: #3062D4;
+    --primary-hover: #173783;
+    --important: #F55E5E;
+    --header-height: 5rem;
+    --bg-white: #f8f8ff;
+}
+
+body {
+    font-family: 'Red Hat Display', 
+    sans-serif;
+    background: var(--bg-white);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: fixed;
+    height: var(--header-height);
+    background-color: var(--primary);
+    padding: 0 1rem;
+    width: 100%;
+    display: flex;
+    user-select: none;
+    align-items: center;
+    justify-content: end;
+}
+
+.navigation__group {
+    display: flex;
+    align-items: center;
+}
+
+.icon-wrapper {
+    position: relative;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    width: 3.25rem;
+    height: 3.25rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.icon-wrapper button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.icon-wrapper .icon {
+    width: 2rem;
+    height: 2rem;
+}
+
+.icon-wrapper:hover, 
+.icon-wrapper:focus {
+    background-color: var(
+        --primary-hover
+    );
+}
+
+.profile {
+    margin-left: 0.5rem;
+    background-color: transparent;
+    border: none;
+}
+
+.profile img {
+    display: block;
+    width: 3.25rem;
+    height: 3.25rem;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid #f7f7f7;
+    transition: all 0.2s ease-in-out;
+}
+
+.profile img:hover {
+    transform: scale(1.05);
+}
+
+.notification-mark {
+    position: absolute;
+    display: block;
+    top: 0.45rem;
+    right: 0.45rem;
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    background-color: var(--important);
+}
+
+.notifications-top {
+    padding: 1rem;
+}
+
+.notification-item {
+    display: flex;
+    cursor: pointer;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    min-height: 6rem;
+    background-color: #FAFBFF;
+    border-top: 1px solid #F1F3F6;
+    transition: all 0.2s ease-in-out;
+}
+
+.notification-item:hover {
+    background-color:  #E5EEFF;
+}
+
+.notification-item .avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    object-fit: cover;
+}
+
+.notification-item .avatar-wrapper {
+    position: relative;
+}
+
+.notification-item .time {
+    color: #7D8491;
+    font-size: 0.8rem;
+}
+
+.dropdown__wrapper {
+    max-width: 22rem;
+    width: 100%;
+    top: 88px;
+    margin: 0px auto;
+    position: absolute;
+    background: var(--bg-white);
+    border-radius: 0.5rem;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    box-shadow: rgba(99, 99, 99, 0.2) 
+    0px 2px 8px 0px;
+    animation: fadeInAnimation ease-in-out 
+    0.5s forwards;
+}
+
+.dropdown__wrapper h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #192028;
+}
+
+.dropdown__wrapper--fade-in {
+    animation: fadeInAnimation ease-in-out 
+    0.5s forwards;
+}
+
+.none {
+    display: none;
+}
+
+.hide {
+    animation: fadeOutAnimation ease-in-out
+     0.5s forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        max-height: 0;
+    }
+    100% {
+        max-height: 40rem;
+    }
+}
+
+@keyframes fadeOutAnimation {
+    0% {
+        max-height: 40rem;
+    }
+    100% {
+        max-height: 0;
+    }
+}
+
